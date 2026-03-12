@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Crawler Tool</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css')}}"/>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Web Crawler Tool</h2>
+
+    <form action="http://localhost:8000/crawl" method="post">
+
+        <label>Website URL</label>
+        <input type="text" name="url" placeholder="https://example.com" required>
+
+        <label>Data Format</label>
+        <select name="format">
+            <option value="html">HTML</option>
+            <option value="xml">XML</option>
+        </select>
+
+        <button type="submit">Crawl & Download TXT</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
